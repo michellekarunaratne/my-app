@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -18,10 +18,12 @@ namespace ServerAPI.Persistence.Repositories
         {
             _userDbEntities = context;
         }
-        public User GetUser(int id)
+        public User GetUser()
         {
-            return _userDbEntities.Users.Find(id);
+           return _userDbEntities.Users.Find(1);
         }
+
+        
 
    
 

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,22 +12,34 @@ namespace ServerAPI.Core.Domain
     public class UnitOfWork : IUnitOfWork
     {
         private readonly dbContext _context;
+        private UserRepository _user;
 
         public UnitOfWork(dbContext context)
         {
             _context = context;
-            User = new UserRepository(_context);
         }
-        public IUserRepository Users => throw new NotImplementedException();
 
-        public int Complete()
+        public IUserRepository Users
         {
-            throw new NotImplementedException();
+            get
+            {
+              if (_user == null)
+              {
+                _user = new UserRepository(_context);
+              }
+
+              return _user;
+            }
+        }
+
+        public void Complete()
+        {
+          _context.SaveChanges();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+          _context.Dispose();
         }
     }
 }

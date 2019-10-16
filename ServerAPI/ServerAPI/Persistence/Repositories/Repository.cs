@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -11,17 +11,11 @@ namespace ServerAPI.Persistence.Repositories
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
-        protected readonly DbContext Context;
-        private dbContext context;
-
-        public Repository(DbContext context)
-        {
-            Context = context;
-        }
+        protected readonly dbContext Context;
 
         public Repository(dbContext context)
         {
-            this.context = context;
+            Context = context;
         }
 
         public TEntity Get(int Id)

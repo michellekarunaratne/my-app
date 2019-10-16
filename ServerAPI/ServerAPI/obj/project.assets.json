@@ -9026,11 +9026,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\99x\\mentor\\ServerAPI\\ServerAPI\\ServerAPI.csproj",
+      "projectUniqueName": "D:\\99x\\mentor\\my-app\\ServerAPI\\ServerAPI\\ServerAPI.csproj",
       "projectName": "ServerAPI",
-      "projectPath": "D:\\99x\\mentor\\ServerAPI\\ServerAPI\\ServerAPI.csproj",
+      "projectPath": "D:\\99x\\mentor\\my-app\\ServerAPI\\ServerAPI\\ServerAPI.csproj",
       "packagesPath": "C:\\Users\\Michelle\\.nuget\\packages\\",
-      "outputPath": "D:\\99x\\mentor\\ServerAPI\\ServerAPI\\obj\\",
+      "outputPath": "D:\\99x\\mentor\\my-app\\ServerAPI\\ServerAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Michelle\\AppData\\Roaming\\NuGet\\NuGet.Config",

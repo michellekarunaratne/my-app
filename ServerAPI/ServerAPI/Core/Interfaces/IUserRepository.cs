@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,7 +8,7 @@ namespace ServerAPI.Core.Interfaces
 {
     public interface IUserRepository :IRepository<User>
     {
-        public User GetUser(int id);
+        public User GetUser();
 
     }
 }
