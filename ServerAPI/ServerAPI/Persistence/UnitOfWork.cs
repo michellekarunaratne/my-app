@@ -32,7 +32,7 @@ namespace ServerAPI.Core.Domain
             }
         }
 
-        public void Complete()
+        public void Save()
         {
           _context.SaveChanges();
         }

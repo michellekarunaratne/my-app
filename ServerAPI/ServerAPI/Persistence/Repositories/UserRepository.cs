@@ -23,6 +23,11 @@ namespace ServerAPI.Persistence.Repositories
            return _userDbEntities.Users.Find(1);
         }
 
+        public void AddUser(User user)
+        {
+            _userDbEntities.Add(user);
+        }
+
         
 
    

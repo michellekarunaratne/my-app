@@ -32,6 +32,13 @@ namespace ServerAPI.Controllers
       return Ok(users);
     }
 
+    [Route("addUser"), HttpPost]
+    public void InsertUser(User user)
+    {
+      _unitOfWork.Users.AddUser(user);
+      _unitOfWork.Save();
+
+    }
         // GET: api/Users/5
         //[HttpGet("{id}")]
         //public IEnumerable<User> GetUser(String id)

@@ -10,6 +10,6 @@ namespace ServerAPI.Core
     {
         IUserRepository Users { get; }
 
-        void Complete();
+        void Save();
     }
 }

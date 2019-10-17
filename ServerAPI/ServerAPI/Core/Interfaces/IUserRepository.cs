@@ -10,5 +10,7 @@ namespace ServerAPI.Core.Interfaces
     {
         public User GetUser();
 
+        public void AddUser(User user);
+
     }
 }
