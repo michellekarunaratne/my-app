@@ -39,6 +39,15 @@ namespace ServerAPI.Controllers
       _unitOfWork.Save();
 
     }
+
+    [Route("findUser/{nic}"),HttpGet]
+    public ActionResult<User> FindUser(string nic)
+    {
+      //System.Diagnostics.Debug.WriteLine(nic);
+      //System.Diagnostics.Debug.WriteLine("Hi");
+      User user=_unitOfWork.Users.FindUser(nic);
+      return Ok(user);
+    }
         // GET: api/Users/5
         //[HttpGet("{id}")]
         //public IEnumerable<User> GetUser(String id)

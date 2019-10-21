@@ -18,14 +18,17 @@ namespace ServerAPI.Persistence.Repositories
         {
             _userDbEntities = context;
         }
-        public User GetUser()
-        {
-           return _userDbEntities.Users.Find(1);
-        }
+        
 
         public void AddUser(User user)
         {
             _userDbEntities.Add(user);
+        }
+
+        public User FindUser(string nic)
+        {
+            User user = _userDbEntities.Find<User>(nic);
+            return user;
         }
 
         
