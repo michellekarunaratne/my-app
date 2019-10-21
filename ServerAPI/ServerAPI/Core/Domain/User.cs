@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,6 +19,7 @@ namespace ServerAPI.Core.Domain
         public string lastName { get; set; }
 
         [Required]
+        [Key]
         public string nic { get; set; }
 
         [Required]

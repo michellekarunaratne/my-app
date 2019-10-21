@@ -8,9 +8,10 @@ namespace ServerAPI.Core.Interfaces
 {
     public interface IUserRepository :IRepository<User>
     {
-        public User GetUser();
+       
 
         public void AddUser(User user);
+        public User FindUser(string nic);
 
     }
 }
