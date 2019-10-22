@@ -29,9 +29,17 @@ namespace ServerAPI.Persistence.Repositories
         {
             User user = _userDbEntities.Find<User>(nic);
             return user;
+
         }
 
-        
+        public void UpdateUser(User user)
+        {
+          User oldUser = _userDbEntities.Find<User>(user.nic);
+          oldUser.firstName = user.firstName;
+          oldUser.lastName = user.lastName;
+          oldUser.phone = user.phone;
+          oldUser.email = user.email;
+        }
 
    
 
