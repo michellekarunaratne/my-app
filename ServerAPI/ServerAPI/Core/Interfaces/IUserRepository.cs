@@ -13,5 +13,7 @@ namespace ServerAPI.Core.Interfaces
         public void AddUser(User user);
         public User FindUser(string nic);
 
+    public void UpdateUser(User user);
+
     }
 }

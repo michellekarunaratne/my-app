@@ -24,7 +24,7 @@ namespace ServerAPI.Controllers
             _unitOfWork = unitOfWork;
         }
 
-    // GET: api/Users
+    // GET: api/Users/getAllUsers
     [Route("getAllUsers"), HttpGet]
     public ActionResult<IEnumerable<User>> Get()
     {
@@ -32,6 +32,7 @@ namespace ServerAPI.Controllers
       return Ok(users);
     }
 
+    //POST: api/Users/addUser
     [Route("addUser"), HttpPost]
     public void InsertUser(User user)
     {
@@ -40,6 +41,7 @@ namespace ServerAPI.Controllers
 
     }
 
+    //GET: api/Users/findUser/{nic}
     [Route("findUser/{nic}"),HttpGet]
     public ActionResult<User> FindUser(string nic)
     {
@@ -48,6 +50,17 @@ namespace ServerAPI.Controllers
       User user=_unitOfWork.Users.FindUser(nic);
       return Ok(user);
     }
+
+    [Route("updateUser"),HttpPut]
+
+    public void UpdateUser(User user)
+    {
+      System.Diagnostics.Debug.WriteLine("Im here");
+      _unitOfWork.Users.UpdateUser(user);
+      _unitOfWork.Save();
+
+    }
+
         // GET: api/Users/5
         //[HttpGet("{id}")]
         //public IEnumerable<User> GetUser(String id)
