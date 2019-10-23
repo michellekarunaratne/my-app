@@ -1,1 +1,18 @@
-<app-side-menu></app-side-menu>
+<div class="sidebar">
+    <ul>
+        <li> <a routerLink="/menu"><i class="fa fa-fw fa-home"></i> Main Menu</a></li>
+        <li><i class="fa fa-fw fa-wrench"></i> Categories</li>
+        <ul>
+                <li><a routerLink="/menu/users"><i class="fa fa-fw fa-user"></i> Users</a></li>
+                <li><a routerLink="/menu/books"><i class="fa fa-fw fa-book"></i> Books</a></li>
+                <li><a routerLink="/menu/orders"><i class="fa fa-fw fa-envelope"></i> Orders</a></li>
+        </ul>
+        
+    </ul>
+</div>
+<router-outlet></router-outlet>
+
+
+  
+
+
