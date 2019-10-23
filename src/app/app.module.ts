@@ -14,6 +14,9 @@ import { UpdateComponent } from './update/update.component';
 import { FindComponent } from './find/find.component';
 import { DeleteComponent } from './delete/delete.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { UsersComponent } from './users/users.component';
+import { BooksComponent } from './books/books.component';
+import { OrdersComponent } from './orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { RegistrationComponent } from './registration/registration.component';
     UpdateComponent,
     FindComponent,
     DeleteComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    UsersComponent,
+    BooksComponent,
+    OrdersComponent
   ],
   imports: [
     MDBBootstrapModule.forRoot(),
